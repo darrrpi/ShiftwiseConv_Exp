@@ -1,0 +1,57 @@
+[
+  {
+    "model": "resnet18",
+    "dataset": "cifar10",
+    "best_accuracy": 94.47,
+    "params_m": 11.17,
+    "flops_g": 0.56,
+    "inference_time_bs1_ms": 1.21,
+    "inference_time_bs128_ms": 13.03
+  },
+  {
+    "model": "resnet18_swconv",
+    "dataset": "cifar10",
+    "best_accuracy": 94.67,
+    "params_m": 88.08,
+    "flops_g": 5.75,
+    "inference_time_bs1_ms": 6.16,
+    "inference_time_bs128_ms": 188.82
+  },
+  
+  {
+    "model": "convnext_tiny",
+    "dataset": "cifar10",
+    "best_accuracy": 91.58,
+    "params_m": 7.45569,
+    "flops_g": 0.3766656,
+    "inference_time_bs1_ms": 2.2999978065490723,
+    "inference_time_bs128_ms": 32.89276361465454
+  },
+  {
+    "model": "repvgg_a0",
+    "dataset": "cifar10",
+    "best_accuracy": 93.44,
+    "params_m": 2.958778,
+    "flops_g": 0.156190848,
+    "inference_time_bs1_ms": 1.005401611328125,
+    "inference_time_bs128_ms": 5.292072296142578
+  },
+  {
+    "model": "mobilenetv3_small",
+    "dataset": "cifar10",
+    "best_accuracy": 74.43,
+    "params_m": 0.909174,
+    "flops_g": 0.001579488,
+    "inference_time_bs1_ms": 3.000001907348633,
+    "inference_time_bs128_ms": 2.909994125366211
+  },
+  {
+    "model": "efficientnet_b0",
+    "dataset": "cifar10",
+    "best_accuracy": 90.81,
+    "params_m": 4.261654,
+    "flops_g": 0.027651584,
+    "inference_time_bs1_ms": 2.760021686553955,
+    "inference_time_bs128_ms": 8.180398941040039
+  }
+]

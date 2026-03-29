@@ -1,0 +1,55 @@
+# Experiment A Configuration
+# Comparison of different architectures on CIFAR-10/100
+
+experiment:
+  name: "Exp_Architecture_Comparison"
+  description: "Comparing ResNet18, ResNet18+SW-Conv, ConvNeXt-Tiny, RepVGG-A0, MobileNetV3-Small, EfficientNet-B0"
+  dataset: "cifar10"  # or "cifar100"
+
+# Training configuration
+training:
+  epochs: 100
+  batch_size: 128
+  num_workers: 4
+  use_augmentation: true
+  early_stopping_patience: 20
+  
+# Optimization
+optimizer:
+  name: "sgd"
+  lr: 0.1
+  momentum: 0.9
+  weight_decay: 0.0005
+
+scheduler:
+  name: "cosine"  # or "plateau" or "none"
+  
+# SW-Conv specific
+swconv:
+  paths: 8  # Number of shift paths
+
+# Models to train
+models:
+  - name: "resnet18"
+    enabled: false  
+    
+  - name: "resnet18_swconv"
+    enabled: false
+    
+  - name: "convnext_tiny"
+    enabled: true
+    
+  - name: "repvgg_a0"
+    enabled: true
+    
+  - name: "mobilenetv3_small"
+    enabled: true
+    
+  - name: "efficientnet_b0"
+    enabled: true
+
+# WandB logging
+wandb:
+  project: "shiftwiseconv-expA"
+  entity: null  # your wandb entity
+  log_interval: 10
